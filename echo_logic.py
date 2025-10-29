@@ -7,3 +7,7 @@ def echo_bot_logic(text):
     - If text is 'gm', reply 'gm'
     - Else, reply "You said: 'text'"
     """
+    if text.lower() == "gm":
+        return "gm"
+    else:
+        return f"You said: '{text}'"
