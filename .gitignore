@@ -209,3 +209,4 @@ __marimo__/
 # Tests
 test_bot.py
 interactive_bot.py
+interactive_bot_full.py
