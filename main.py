@@ -1,4 +1,4 @@
-# echo_logic.py
+# main.py
 # Core logic for Echo Bot
 
 def echo_bot_logic(text):
