@@ -23,4 +23,17 @@ def echo_bot(request):
         "actionContext": None
     }]
 
-    return (json.dumps(response), 200, {"Content-Type": "application/json"})
+    #CORS headers
+    headers = {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "https://oravec.io",  # allow frontend domain
+        "Access-Control-Allow-Methods": "POST, OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type"
+    }
+
+    # Browser preflight OPTIONS request
+    if request.method == "OPTIONS":
+        return ("", 204, headers)
+
+    #Return JSON for POST
+    return (json.dumps(response), 200, headers)
